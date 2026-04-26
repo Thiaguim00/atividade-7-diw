@@ -40,7 +40,12 @@ if (u > x) {
     mensagem = "Infelizmente, " + name + ", suas despesas são maiores que sua renda mensal. Tente reduzir seus gastos.";
 }
 else {    o = x - u;
-    mensagem = "Parabéns, " + name + "! Suas despesas são menores que sua renda mensal. Você tem um saldo positivo de " + o + " reais.";
+    if (o >= x * 0.3) {
+        mensagem = "✅ Ótimo: boa margem de sobra.";
+    } else {
+        mensagem = "🙂 Ok: dá para melhorar a sobra.";
+    }
+    
 }
 
 let resultado =
